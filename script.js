@@ -40,11 +40,11 @@ function generatePassword() {
       return;
     }
 
-    
+
     //  CONFIRM if the password generator 'isUsingNumbers'
     var useNumbers = confirm("Would you like your password to contain numbers ?");
     if (useNumbers === true) {
-      charactersToUse.push(numbers)
+      charactersToUse = charactersToUse.concat(numbers)
     }
     console.log(useNumbers);
     console.log(charactersToUse);
@@ -55,7 +55,7 @@ function generatePassword() {
     //  CONFIRM if the password generator 'isUsingLowercaseLetters'
     var useLowercaseLetters = confirm("Would you like your password to contain lowercase characters?");
     if (useLowercaseLetters === true) {
-      charactersToUse.push(lowercase)
+      charactersToUse = charactersToUse.concat(lowercase)
     }
     console.log(useLowercaseLetters);
     //  IF 'isUsingLowercaseLetters'
@@ -64,7 +64,7 @@ function generatePassword() {
     //  CONFIRM if the password generator 'isUsingUppercaseLetters'
     var useUppercaseLetters = confirm("Would you like your password to contain uppercase characters?");
     if (useUppercaseLetters === true) {
-      charactersToUse.push(uppercase)
+      charactersToUse = charactersToUse.concat(uppercase)
     }
     console.log(useUppercaseLetters);
     //  IF 'isUsingUppercaseLetters'
@@ -73,7 +73,7 @@ function generatePassword() {
     //  CONFIRM if the password generator 'isUsingSpecialCharactersLetters'
     var useSpecialCharacters = confirm("Would you like your password to contain special characters?");
     if (useSpecialCharacters === true) {
-      charactersToUse.push(specialcharacters)
+      charactersToUse = charactersToUse.concat(specialcharacters)
     }
     console.log(useSpecialCharacters);
     //  IF 'isUsingSpecialCharactersLetters'
@@ -81,9 +81,9 @@ function generatePassword() {
 
 
     // IF NOT 'charactersToUse.lenght'
-    if (charactersToUse.length < passwordlength){
-      alert ("Please enter correct length")
-      characterSet ()
+    if (!charactersToUse.length) {
+      alert("Please enter correct length")
+      characterSet()
     }
     // THEN ALERT to the user they they need to provide a correct length 
     // AND EXIT FUNCTION
