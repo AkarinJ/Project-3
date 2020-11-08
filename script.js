@@ -33,9 +33,9 @@ function generatePassword() {
 
 
     // IF NOT ( passwordlength >= 8 || passwordlength <= 128 )
-    if (!(passwordlength >= 8 || passwordlength <= 128)) {
+    if ((passwordlength < 8 || passwordlength > 128)) {
       // THEN ALERT to the user that they tp provide a correct length
-      alert("WRONG!")
+      alert("Please select 8 or more characters")
       // AND EXIT FUNCTION
       return;
     }
@@ -82,22 +82,23 @@ function generatePassword() {
 
     // IF NOT 'charactersToUse.lenght'
     if (!charactersToUse.length) {
-      alert("Please enter correct length")
+      alert("Please select at least 1 char")
       characterSet()
     }
+    console.log (charactersToUse)
     // THEN ALERT to the user they they need to provide a correct length 
     // AND EXIT FUNCTION
   }
 
   // WHILE password.length < passwordlength
-  while (password.length < passwordlength) {
+  //while (password.length < passwordlength) {
 
 
     //  SELECT 'randomCharacter' a character from 'charactersToUse'
     //  APPEND 'randomCharacter' to 'password' string
 
 
-  }
+  //}
 
 
   // RETURN 'password'
