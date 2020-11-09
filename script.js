@@ -85,7 +85,7 @@ function generatePassword() {
       alert("Please select at least 1 char")
       characterSet()
     }
-    console.log (charactersToUse)
+    console.log(charactersToUse)
     // THEN ALERT to the user they they need to provide a correct length 
     // AND EXIT FUNCTION
   }
@@ -94,12 +94,12 @@ function generatePassword() {
   //while (password.length < passwordlength) {
 
 
-    //  SELECT 'randomCharacter' a character from 'charactersToUse'
-    //  APPEND 'randomCharacter' to 'password' string
+  //  SELECT 'randomCharacter' a character from 'charactersToUse'
+  let randomCharacter = charactersToUse[Math.floor(Math.random() * charactersToUse.length)];
+  //  APPEND 'randomCharacter' to 'password' string
+  password += randomCharacter
 
-
-  //}
-
+  // }
 
   // RETURN 'password'
   return password;
