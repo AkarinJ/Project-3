@@ -81,22 +81,25 @@ function generatePassword() {
 
   // WHILE password.length < passwordlength
 
-  
+  var passwordChar = [];
 
-  for (var i = 0; i < passwordlength.length; i++) {
+  for (var i = 0; i < passwordlength; i++) {
 
 
     //  SELECT 'randomCharacter' a character from 'charactersToUse'
     var randomCharacter = charactersToUse[Math.floor(Math.random() * charactersToUse.length)];
     //  APPEND 'randomCharacter' to 'password' string
-    password += randomCharacter;
+  passwordChar.push(randomCharacter)
 
-
-
-    // RETURN 'password'
-    return password;
 
   }
+  passwordstr = passwordChar.toString();
+    console.log(passwordstr)
+
+    // RETURN 'password'
+    return passwordstr;
+
+  
   // WHEN I answer each prompt
   // THEN my input should be validated and at least one character type should be selected
   // WHEN all prompts are answered
