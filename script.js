@@ -93,7 +93,8 @@ function generatePassword() {
 
 
   }
-  passwordstr = passwordChar.toString();
+  passwordstr = passwordChar.join("");
+  
     console.log(passwordstr)
 
     // RETURN 'password'
